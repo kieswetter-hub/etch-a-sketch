@@ -22,6 +22,3 @@ function createGrid() {
 
 createGrid()
 
-oninput = function () {
-   createGrid()
-}
