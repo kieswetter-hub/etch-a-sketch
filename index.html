@@ -9,7 +9,8 @@
 </head>
 <body>
     <h1>Etch-a-Sketch</h1>
-
+    <p class="instructions">Move over the canvas to paint, choose grid size and colour below.<br>
+        To clear the grid push the erase button. </p>
     <div class="gridContainer"></div>
   
     <div class="buttonContainer">
@@ -19,12 +20,12 @@
     </div>
     
     <div class="slideContainer">
-        <p><span id=displaySize></span></p>
         <input type="range" min="12" max ="32" value="22" class="slider" id="mySize" oninput=createGrid()>
+        <p><span id=displaySize></span></p>
     </div>
 
     <div class="footer">
-        <p>Made by <a href="https://github.com/kieswetter-hub">kieswetter-hub</a></p>
+        <p>Made by: <a href="https://github.com/kieswetter-hub">kieswetter-hub</a></p>
         <img class="gitLogo" src="images/github-logo-white.png">
     </div>
 
