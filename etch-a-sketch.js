@@ -2,13 +2,22 @@
 
 /* create a grid of 16 x 16 using only DOM */
 
-function generateGrid (numberOfItems) {
-    let htmlToAdd = "";
+document.addEventListener("DOMContentLoaded", function(){
+})
 
-    for (let i = 0; i < numberOfItems; i++) {
-        htmlToAdd += `<div class="gridDiv"></div>`;
+function createGrid(size){
+    let gridContainer = document.querySelector(".gridContainer")
+
+    gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+    let numDivs = size * size;
+
+    for(let i = 0; i < numDivs; i++){
+        const div = document.createElement("div");
+        div.style.backgroundColor = "pink";
+        gridContainer.insertAdjacentElement("beforeend", div);
     }
-    container.innerHTML = htmlToAdd;
 }
 
-generateGrid(256)
+createGrid(16);
