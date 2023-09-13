@@ -44,5 +44,6 @@ function colorDiv() {
 }
 
 function eraseGrid() {
-    location.reload()
+    let divs = document.querySelectorAll('.gridDiv')
+    divs.forEach((div) => div.style.backgroundColor = "white");
 }
