@@ -1,8 +1,7 @@
 /* etch-a-sketch code */
 
 /* create a grid of 16 x 16 using only DOM */
-
-oninput = function() {
+function createGrid() {
     const slider = document.getElementById("mySize");
     const output = document.getElementById("displaySize");
     output.innerHTML = `${slider.value} x ${slider.value}`; 
@@ -19,4 +18,10 @@ oninput = function() {
         div.style.backgroundColor = "pink";
         gridContainer.insertAdjacentElement("beforeend", div);
     }
+}
+
+createGrid()
+
+oninput = function () {
+   createGrid()
 }
