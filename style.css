@@ -3,13 +3,16 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #DCDCDC;
 }
 
-.gridcontainer {
+.gridContainer {
     width: 500px;
     height: 500px;
     display: grid;
-    border: 5px solid lightgrey;
+
+    background-color: white;
+    box-shadow: 0 0  5px 5px #BEBEBE;
 }
 
 .buttonContainer {
@@ -29,4 +32,29 @@ button {
     font-size: 20px;
     padding: 12px 30px;
     border-radius: 100px;
+    cursor: pointer;
 }
+
+/* slider */
+
+.slider {
+    appearance: none;
+    width: 200px; /* Full-width */
+    height: 12px; /* Specified height */
+    background: #d3d3d3;
+    transition: opacity .2s;
+    border: 1px solid rgb(95, 95, 95);
+    border-radius: 100px;
+
+  }
+  
+  /* The slider handle */
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    background-color: darkcyan;
+    border: 3px solid black;
+    cursor: pointer;
+    border-radius: 100px;
+  }
