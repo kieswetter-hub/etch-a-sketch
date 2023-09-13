@@ -1,6 +1,11 @@
 /* etch-a-sketch code */
 
-/* create a grid of 16 x 16 using only DOM */
+/* global variables */
+let color = "black";
+
+/* create dynamic grid using DOM */
+createGrid()
+
 function createGrid() {
     const slider = document.getElementById("mySize");
     const output = document.getElementById("displaySize");
@@ -15,10 +20,25 @@ function createGrid() {
 
     for(let i = 0; i < numDivs; i++){
         const div = document.createElement("div");
-        div.style.backgroundColor = "pink";
+        div.classList.add("gridDiv");
+        div.addEventListener("mouseover", colorDiv);
         gridContainer.insertAdjacentElement("beforeend", div);
     }
+} 
+
+/* functions for changing color */
+
+function setColor(colorChoice) {
+    color = colorChoice;
 }
 
-createGrid()
-
+function colorDiv() {
+    if(color == "random"){
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        console.log('rando works');
+    } 
+    else {
+        this.style.backgroundColor = "black";
+        console.log('black works');
+    }
+}

@@ -11,8 +11,9 @@
     <h1>Etch-a-Sketch</h1>
     <div class="gridContainer"></div>
     <div class="buttonContainer">
-        <button class="colorButton">Black</button>
-        <button class="colorButton">Erase</button>
+        <button class="colorButton" onclick="setColor('black')">Black</button>
+        <button class="colorButton" onclick="setColor('random')">Random</button>
+        <button class="colorButton" onclick=eraseGrid()>Erase</button>
     </div>
     <div class="slideContainer">
         <p>Grid size: <span id=displaySize></span></p>
