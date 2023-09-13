@@ -9,16 +9,25 @@
 </head>
 <body>
     <h1>Etch-a-Sketch</h1>
+
     <div class="gridContainer"></div>
+  
     <div class="buttonContainer">
         <button class="colorButton" onclick="setColor('black')">Black</button>
-        <button class="colorButton" onclick="setColor('random')">Random</button>
+        <button class="colorButton" onclick="setColor('random')">Rainbow</button>
         <button class="colorButton" onclick=eraseGrid()>Erase</button>
     </div>
+    
     <div class="slideContainer">
-        <p>Grid size: <span id=displaySize></span></p>
+        <p><span id=displaySize></span></p>
         <input type="range" min="12" max ="32" value="22" class="slider" id="mySize" oninput=createGrid()>
     </div>
+
+    <div class="footer">
+        <p>Made by <a href="https://github.com/kieswetter-hub">kieswetter-hub</a></p>
+        <img class="gitLogo" src="images/github-logo-white.png">
+    </div>
+
     <script src="etch-a-sketch.js"></script>
 </body>
 </html>
