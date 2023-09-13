@@ -42,3 +42,7 @@ function colorDiv() {
         console.log('black works');
     }
 }
+
+function eraseGrid() {
+    location.reload()
+}
